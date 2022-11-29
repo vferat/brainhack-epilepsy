@@ -1,2 +1,8 @@
 # brainhack-epilepsy
-Epileptic features extraction 
+
+Epileptic features extraction.
+
+
+## Installation
+
+

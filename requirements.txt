@@ -1,0 +1,8 @@
+notebook
+mne
+PyQt5
+mne-qt-browser
+git+https://github.com/Functional-Brain-Mapping-Laboratory/PyCartool
+pandas
+scikit-learn
+umap-learn
