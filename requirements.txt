@@ -2,7 +2,12 @@ notebook
 mne
 PyQt5
 mne-qt-browser
-git+https://github.com/Functional-Brain-Mapping-Laboratory/PyCartool
+
+PyWavelets
+antropy
+
+joblib
+
 pandas
 scikit-learn
-umap-learn
+umap-learn[plot]

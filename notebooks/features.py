@@ -97,7 +97,7 @@ def extract_freq_feat(X, sfreq):
         f_feat[:, :, i_fb] = np.sum(butter_bandpass_filter(X, fb[0], fb[1], sfreq, order=3) ** 2, axis=-1) / n_times
 
     # spectral edge frequency
-    Xdct = dct(X.copy(), type=2, n=None, axis=- 1, norm='ortho', overwrite_x=False, workers=-1)
+    Xdct = dct(X.copy(), type=2, n=None, axis=- 1, norm='ortho', overwrite_x=False, workers=1)
     f_feat[:, :, n_bands + 0] = np.percentile(Xdct, 80, overwrite_input=False)
     f_feat[:, :, n_bands + 1] = np.percentile(Xdct, 95, overwrite_input=False)
     del Xdct
@@ -105,7 +105,7 @@ def extract_freq_feat(X, sfreq):
     return f_feat
 
 
-def extract_information_feat(X, sfreq, svd_order=3, svd_delay=1, svd_norm=True, n_jobs=-1):
+def extract_information_feat(X, sfreq, svd_order=3, svd_delay=1, svd_norm=True, n_jobs=1):
     """
     Compute information features:
         * SVD entropy
